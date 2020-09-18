@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundImageSource="zadnja.png"
+             x:Class="IB120045_Mobile.KorisnickiProfil">
+    <ContentPage.Content>
+        <StackLayout Padding="30">
+        <StackLayout Padding="50" BackgroundColor="#8FFFFFFF">
+            <Label Text="Uredite vaš profil"
+                FontAttributes="Bold"  FontSize="Medium"
+                HorizontalOptions="CenterAndExpand" />
+            <!-- Form inputs -->
+            <Label Text="Username"/>
+            <Label x:Name="UsernameError" FontSize="11" TextColor="Red" IsVisible="False"/>
+            <Entry x:Name="inputUsername" IsVisible="True" />
+
+            <Label Text="Password"/>
+            <Label x:Name="PasswordError" FontSize="11" TextColor="Red" IsVisible="False"/>
+            <Entry x:Name="inputPassword" IsPassword="True"/>
+
+            <Label Text="Ime"/>
+            <Label x:Name="ImeError" FontSize="11" TextColor="Red" IsVisible="False"/>
+            <Entry x:Name="inputIme"/>
+
+            <Label Text="Prezime"/>
+            <Label x:Name="PrezimeError" FontSize="11" TextColor="Red" IsVisible="False"/>
+            <Entry x:Name="inputPrezime"/>
+
+            <Label Text="E-mail"/>
+            <Label x:Name="MailError" FontSize="11" TextColor="Red" IsVisible="False"/>
+            <Entry x:Name="inputMail"/>
+
+            <Label Text="Grad"/>
+            <Label x:Name="GradError" FontSize="11" TextColor="Red" IsVisible="False"/>
+            <Entry x:Name="inputGrad"/>
+
+
+            <!-- Button section -->
+            <Button x:Name="BtnIzmjeni" Text="Sačuvaj" Clicked="BtnIzmjeni_Clicked" FontAttributes="Bold" BackgroundColor="CadetBlue" />
+        </StackLayout></StackLayout>
+    </ContentPage.Content>
+</ContentPage>

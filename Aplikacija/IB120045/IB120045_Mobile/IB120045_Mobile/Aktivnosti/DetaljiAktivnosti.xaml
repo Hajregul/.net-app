@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  BackgroundImageSource="zadnja.png"
+                   xmlns:converters="clr-namespace:IB120045_Mobile.Converter"
+             x:Class="IB120045_Mobile.Aktivnosti.DetaljiAktivnosti">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ImageConverter x:Key="imgConv"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout Padding="30" >
+        <ScrollView Padding="70,50,70,50">
+            <StackLayout Padding="100,30,100,50"  BackgroundColor="#8FFFFFFF">
+                <StackLayout Padding="20" VerticalOptions="End" Style="{StaticResource Container}" HorizontalOptions="CenterAndExpand">
+                    <StackLayout Padding="0,10,0,10" BackgroundColor="#8FFFFFFF" >
+                        <Label Text="Detalji aktivnosti" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"></Label>
+                    </StackLayout>
+                    <StackLayout  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="#8FFFFFFF">
+
+                        <StackLayout HorizontalOptions="CenterAndExpand" x:Name="odabranaAktivnost"  >
+                            <Grid Padding="50,10,50,10" >
+                                <Image Grid.Column="0" Grid.Row="0" Source="{Binding SlikaThumb, Converter={StaticResource imgConv}}" HorizontalOptions="Start" Aspect="AspectFit"></Image>
+
+
+                                <StackLayout Grid.Column="1" Margin="5">
+                                    <StackLayout   >
+                                        <Label  
+                                    Text="{Binding Naziv}" FontAttributes="Bold" TextColor="Black" />
+                                    </StackLayout>
+                                    <StackLayout   >
+
+                                        <Label 
+                                    Text="{Binding Vrijeme}"/>
+                                    </StackLayout>
+                                    <StackLayout >
+                                        <Label
+                                    Text="{Binding Datum}"  />
+                                    </StackLayout>
+
+
+                                    <StackLayout >
+                                        <StackLayout   >
+
+                                            <Label 
+                                    Text="{Binding Ogranicenja}"/>
+                                        </StackLayout>
+                                        <Label 
+                                    Text="{Binding ProsjecnaOcjena}"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Grid>
+
+                        </StackLayout>
+                        <StackLayout BackgroundColor="#8FFFFFFF">
+                            <StackLayout  HorizontalOptions="CenterAndExpand"  >
+                                <Grid Padding="50,1,50,10" Margin="10"   HorizontalOptions="Center">
+
+                                    <StackLayout Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
+                                        <ImageButton x:Name="zvjezdica1" Clicked="Zvjezdica1_Clicked" Style="{StaticResource Zvjezdica}" Source="star.png" />
+                                        <ImageButton x:Name="zvjezdica2" Clicked="Zvjezdica2_Clicked" Style="{StaticResource Zvjezdica}" Source="star.png" />
+                                        <ImageButton x:Name="zvjezdica3" Clicked="Zvjezdica3_Clicked" Style="{StaticResource Zvjezdica}" Source="star.png" />
+                                        <ImageButton x:Name="zvjezdica4" Clicked="Zvjezdica4_Clicked" Style="{StaticResource Zvjezdica}" Source="star.png" />
+                                        <ImageButton x:Name="zvjezdica5" Clicked="Zvjezdica5_Clicked" Style="{StaticResource Zvjezdica}" Source="star.png" />
+                                    </StackLayout>
+
+                                    <StackLayout Grid.Column="1">
+                                        <Button x:Name="Prijavise" Text="Prijavi se na aktivnost" Clicked="Prijavise_Clicked" BackgroundColor="CadetBlue"></Button>
+                                    </StackLayout>
+                                </Grid>
+                            </StackLayout>
+                            <StackLayout  HorizontalOptions="CenterAndExpand"  >
+                                <Grid Padding="50,0,50,10" Margin="10"    HorizontalOptions="Center">
+
+                                    <StackLayout Grid.Row="0" Grid.Column="0">
+                                        <Label Text="Unesite komentar" FontAttributes="Bold"/>
+                                    </StackLayout>
+
+                                    <StackLayout Grid.Column="1">
+                                        <Label x:Name="UsernameKomentar" FontSize="11" TextColor="Red" IsVisible="False"/>
+                                        <Entry x:Name="inputKomentar" IsVisible="True" />
+                                        <Button x:Name="Komentiraj" Text="Komentiraj" Clicked="Komentiraj_Clicked" BackgroundColor="CadetBlue"></Button>
+                                    </StackLayout>
+                                </Grid>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Padding="0,10,0,10" BackgroundColor="#8FFFFFFF">
+                        <Label Text="Preporučeno za Vas" FontSize="Medium" FontAttributes="Bold"  HorizontalOptions="CenterAndExpand" ></Label>
+                    </StackLayout>
+                    <ListView x:Name="MenuItemsListView"  BackgroundColor="#8FFFFFFF"
+   ItemTapped="MenuItemsListView_ItemTapped" >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout HorizontalOptions="CenterAndExpand" >
+                                        <Grid Padding="50,10,50,10" >
+                                            <Image Grid.Column="0" Source="{Binding SlikaThumb, Converter={StaticResource imgConv}}" HorizontalOptions="Start" Aspect="AspectFit"></Image>
+
+                                            <StackLayout Grid.Column="1">
+                                                <StackLayout   >
+                                                    <Label  
+                                    Text="{Binding Naziv}" FontAttributes="Bold"  />
+                                                </StackLayout>
+                                                <StackLayout >
+                                                    <Label
+                                    Text="{Binding Datum}"  />
+
+                                                    <Label 
+                                    Text="{Binding VrstaNaziv}"/>
+                                                    <Label 
+                                    Text="{Binding ProsjecnaOcjena}"/>
+                                                </StackLayout>
+                                            </StackLayout>
+                                        </Grid>
+
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </StackLayout>
+
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

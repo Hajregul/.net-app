@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IB120045_Mobile.Login">
+    <StackLayout Padding="50" >
+    <StackLayout BackgroundColor="#8FFFFFFF">
+        <Label Text="Login"
+                FontAttributes="Bold"  FontSize="Medium"
+                HorizontalOptions="CenterAndExpand" />
+        <StackLayout VerticalOptions="CenterAndExpand" Style="{StaticResource Container}" Padding="30" >
+            <Label x:Name="UsernameError" IsVisible="False" TextColor="Red" FontSize="11"/>
+            <Entry x:Name="inputUsername" Placeholder="Username" Text="mobile" />
+            <Label x:Name="PasswordError" IsVisible="False" TextColor="Red" FontSize="11"/>
+            <Entry x:Name="inputPassword" Placeholder="Password" Text="test" IsPassword="True" />
+            <Button x:Name="btnLogin" Text="Login" Clicked="BtnLogin_Clicked" FontAttributes="Bold" BackgroundColor="CadetBlue"/>
+            <Label Text="Nemate račun?" HorizontalOptions="Center"/>
+            <Button x:Name="btnRegistracija" Text="Registrujte se"  Clicked="BtnRegistracija_Clicked" FontAttributes="Bold" BackgroundColor="CadetBlue"/>
+            <ActivityIndicator x:Name="loaderIndicator" Color="Red" IsRunning="False" />
+        </StackLayout>
+    </StackLayout></StackLayout>
+</ContentPage>

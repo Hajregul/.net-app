@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0590c72e8332486a9fe4574e3d1c912f" Name="Diagram1">
+        <EntityTypeShape EntityType="StarackiModel.AktivnostiKomentari" Width="1.5" PointX="13.5" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="StarackiModel.AktivnostiKorisnici" Width="1.5" PointX="14.5" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="StarackiModel.Aktovnosti" Width="1.5" PointX="5.25" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="StarackiModel.Dijagnoze" Width="1.5" PointX="9.75" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="StarackiModel.Korisnici" Width="1.5" PointX="8.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="StarackiModel.Ocjene" Width="1.5" PointX="10.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="StarackiModel.Pacijenti" Width="1.5" PointX="5.25" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="StarackiModel.Pregledi" Width="1.5" PointX="7.5" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StarackiModel.Skrbnici" Width="1.5" PointX="3" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="StarackiModel.Sobe" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="StarackiModel.Spol" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StarackiModel.Spratovi" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="StarackiModel.sysdiagrams" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StarackiModel.Terapije" Width="1.5" PointX="12" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="StarackiModel.TipoviSoba" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="StarackiModel.Uloge" Width="1.5" PointX="0.75" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="StarackiModel.VrstaAktivnosti" Width="1.5" PointX="3" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="StarackiModel.ZahtejviZaPrijavuUDom" Width="1.5" PointX="10.5" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="StarackiModel.Zaposlenici" Width="1.5" PointX="3" PointY="14.625" IsExpanded="true" />
+        <AssociationConnector Association="StarackiModel.FK__Aktivnost__Aktiv__339FAB6E" ManuallyRouted="false" />
+        <AssociationConnector Association="StarackiModel.FK__Aktivnost__Koris__32AB8735" ManuallyRouted="false" />
+        <AssociationConnector Association="StarackiModel.FK__Aktivnost__Aktiv__5AB9788F" ManuallyRouted="false" />
+        <AssociationConnector Association="StarackiModel.FK__Aktivnost__Koris__59C55456" ManuallyRouted="false" />
+        <AssociationConnector Association="StarackiModel.FK__Aktovnost__Vrsta__6EF57B66" ManuallyRouted="false" />
+        <AssociationConnector Association="StarackiModel.FK__Aktovnost__Zapos__6B24EA82" ManuallyRouted="false" />
+        <AssociationConnector Association="StarackiModel.FK__Ocjene__Aktivnos__7F2BE32F" ManuallyRouted="false" />
+        <AssociationConnector Association="StarackiModel.FK__Dijagnoze__Pregl__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="StarackiModel.FK__Terapije__Dijagn__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="StarackiModel.FK__Ocjene__Korisnik__7E37BEF6" ManuallyRouted="false" />
+        <AssociationConnector Association="StarackiModel.FK__ZahtejviZ__Koris__540C7B00" ManuallyRouted="false" />
+        <AssociationConnector Association="StarackiModel.FK__Pacijenti__Skrbn__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="StarackiModel.FK__Pacijenti__SobaI__625A9A57" ManuallyRouted="false" />
+        <AssociationConnector Association="StarackiModel.FK__Pacijenti__SpolI__40F9A68C" ManuallyRouted="false" />
+        <AssociationConnector Association="StarackiModel.FK__Pacijenti__Zapos__4E53A1AA" ManuallyRouted="false" />
+        <AssociationConnector Association="StarackiModel.FK__Pregledi__Pacije__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="StarackiModel.FK__ZahtejviZ__Pacij__73852659" ManuallyRouted="false" />
+        <AssociationConnector Association="StarackiModel.FK__Pregledi__Zaposl__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="StarackiModel.FK__Skrbnici__SpolID__41EDCAC5" ManuallyRouted="false" />
+        <AssociationConnector Association="StarackiModel.FK__Sobe__SpratID__3B40CD36" ManuallyRouted="false" />
+        <AssociationConnector Association="StarackiModel.FK__Sobe__TipSobeID__3C34F16F" ManuallyRouted="false" />
+        <AssociationConnector Association="StarackiModel.FK__Zaposleni__Uloge__628FA481" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

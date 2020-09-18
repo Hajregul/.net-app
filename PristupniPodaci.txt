@@ -1,0 +1,17 @@
+Desktop app:
+
+Administrator
+
+user: admin
+pw: test
+
+Zaposlenik (user za Preglede/Dijagnoze/Terapije)
+user: radnik
+pw: test
+
+--------------------------------
+
+Mobile:
+
+user: mobile
+pw: test

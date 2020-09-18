@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"     BackgroundImageSource="zadnja.png"
+             
+             x:Class="IB120045_Mobile.Aktivnosti.Prijava">
+    <StackLayout Padding="30" >
+        <ScrollView  BackgroundColor="#8FFFFFFF">
+            <StackLayout Padding="50" BackgroundColor="#8FFFFFFF">
+                <StackLayout BackgroundColor="#8FFFFFFF" Padding="10">
+                    <StackLayout Padding="0,0,0,10">
+                        <Label Text="Podaci o pacijentu"
+                FontAttributes="Bold"  FontSize="Medium"
+                HorizontalOptions="CenterAndExpand" />
+                        <!-- Form inputs -->
+
+                        <Label Text="Ime"/>
+                        <Label x:Name="ImeError" FontSize="11" TextColor="Red" IsVisible="False"/>
+                        <Entry x:Name="inputIme"/>
+
+                        <Label Text="Prezime"/>
+                        <Label x:Name="PrezimeError" FontSize="11" TextColor="Red" IsVisible="False"/>
+                        <Entry x:Name="inputPrezime"/>
+
+                        <Label Text="Datum rođenja"/>
+                        <DatePicker x:Name="dateRodjenja" MinimumDate="1/1/1900" MaximumDate="12/31/2030"/>
+
+                        <Label Text="Spol"/>
+                        <Picker x:Name="spolPicker" 
+        Title="Odaberite vrstu aktivnosti" 
+                        TitleColor="#00000000"
+        ItemsSource="{Binding SpolList}"
+        ItemDisplayBinding="{Binding Naziv}"
+        SelectedItem="{Binding SelectedSpol}"
+                    SelectedIndexChanged="SpolPicker_SelectedIndexChanged"/>
+                        <Label Text="JMBG"/>
+                        <Label x:Name="JMBGError" FontSize="11" TextColor="Red" IsVisible="False"/>
+                        <Entry x:Name="inputJMBG" MaxLength="13" Keyboard="Numeric">
+
+                        </Entry>
+                    </StackLayout>
+                    <StackLayout Padding="0,0,0,10">
+                        <Label Text="Podaci o skrbniku"
+                FontAttributes="Bold"  FontSize="Medium"
+                HorizontalOptions="CenterAndExpand" />
+                        <!-- Form inputs -->
+
+                        <Label Text="Ime skrbnika"/>
+                        <Label x:Name="ImeEError" FontSize="11" TextColor="Red" IsVisible="False"/>
+                        <Entry x:Name="inputImeE"/>
+
+                        <Label Text="Prezime skrbnika"/>
+                        <Label x:Name="PrezimeEError" FontSize="11" TextColor="Red" IsVisible="False"/>
+                        <Entry x:Name="inputPrezimeE"/>
+
+                        <Label Text="Datum rođenja skrbnika"/>
+                        <DatePicker MinimumDate="1/1/1900" MaximumDate="12/31/2030"/>
+
+                        <Label Text="Spol skrbnika"/>
+                        <Picker x:Name="spolSkrbnikaPicker"
+        Title="Odaberite vrstu aktivnosti" 
+                        TitleColor="#00000000"
+        ItemsSource="{Binding SpolList}"
+        ItemDisplayBinding="{Binding Naziv}"
+        SelectedItem="{Binding SelectedSpol}"
+                    SelectedIndexChanged="SpolSkrbnikaPicker_SelectedIndexChanged"/>
+
+                        <Label Text="Adresa"/>
+                        <Label x:Name="AdresaError" FontSize="11" TextColor="Red" IsVisible="False"/>
+                        <Entry x:Name="inputAdresa"/>
+
+                        <Label Text="Telefon"/>
+                        <Label x:Name="TelefonError" FontSize="11" TextColor="Red" IsVisible="False"/>
+                        <Entry x:Name="inputTelefon"  Keyboard="Telephone" MaxLength="20"/>
+
+                        <Label Text="Mail"/>
+                        <Label x:Name="MailError" FontSize="11" TextColor="Red" IsVisible="False"/>
+                        <Entry x:Name="inputMail" Keyboard="Email"/>
+
+
+                        <Button Text="PRIJAVI SE" BackgroundColor="DarkBlue" TextColor="White" Clicked="Button_Clicked"></Button>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

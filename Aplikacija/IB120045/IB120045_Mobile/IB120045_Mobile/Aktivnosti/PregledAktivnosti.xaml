@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IB120045_Mobile.Aktivnosti.PregledAktivnosti"
+                  BackgroundImageSource="zadnja.png"
+             xmlns:converters="clr-namespace:IB120045_Mobile.Converter">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ImageConverter x:Key="imgConv"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="90,20,70,10" BackgroundColor="#8FFFFFFF" VerticalOptions="CenterAndExpand" Style="{StaticResource Container}">
+            <Picker x:Name="pickerh" 
+        Title="Odaberite vrstu aktivnosti" 
+                        TitleColor="#00000000"
+        ItemsSource="{Binding VrsteList}"
+        ItemDisplayBinding="{Binding Naziv}"
+        SelectedItem="{Binding SelectedVrste}"
+                    SelectedIndexChanged="Pickerh_SelectedIndexChanged"/>
+        <Label x:Name="NazivError" FontSize="11" TextColor="Red" IsVisible="False"/>
+        <Entry x:Name="inputNaziv" Placeholder="Unesite naziv"/>
+            
+
+                <!-- Button section -->
+                <Button x:Name="btnTrazi" Text="Traži" Clicked="BtnTrazi_Clicked" FontAttributes="Bold" BackgroundColor="CadetBlue" />
+            <ListView x:Name="MenuItemsListView" 
+                        SeparatorVisibility="None"
+                      ItemTapped="MenuItemsListView_ItemTapped"
+            HasUnevenRows="true">
+               
+                <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout HorizontalOptions="CenterAndExpand" x:Name="odabranaOprema" >
+                                <Grid Padding="50,10,50,10" BackgroundColor="#E0EEEE" >
+
+                                <Image Grid.Column="0" Source="{Binding SlikaThumb, Converter={StaticResource imgConv}}" HorizontalOptions="Start" Aspect="AspectFit"></Image>
+
+
+                                <StackLayout Grid.Column="1">
+                                    <StackLayout   >
+                                        <Label  
+                                    Text="{Binding Naziv}" FontAttributes="Bold" />
+                                    </StackLayout>
+                                            <StackLayout >
+
+                                        <Label 
+                                    Text="{Binding VrstaNaziv}"/>
+                                            </StackLayout>
+                                  <StackLayout >
+                                            <Label 
+                                    Text="{Binding Ogranicenja}"/>
+                                        </StackLayout>
+                                </StackLayout>
+                            </Grid>
+
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView></StackLayout>
+    </ContentPage.Content>
+</ContentPage>
